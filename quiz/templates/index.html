@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block title %}Выберите тему{% endblock %}
+
+{% block content %}
+<div class="padding_10"></div>
+<div class="themes_list">
+{% for theme in themes %}
+    <a href="question?action=init&theme_pk={{ theme.pk }}">{{ theme.name }}</a><br />
+{% endfor %}
+    <a href="question?action=common_test">ОБЩИЙ ТЕСТ</a><br />
+</div>
+
+{% endblock %}

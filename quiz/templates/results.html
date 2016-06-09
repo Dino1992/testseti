@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block title %}Ваш результат:{% endblock %}
+
+{% block content %}
+
+<div class="padding_40"></div>
+<div class="result">
+Количество верных ответов: {{ correct_answers }}<br />
+Количество неверных ответов: {{ incorrect_answers }}
+</div>
+
+
+{% endblock %}

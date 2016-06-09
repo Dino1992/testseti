@@ -1,0 +1,29 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Тест</title>
+    <link type="text/css" rel="stylesheet" href="/static/quiz/css/main.css" />
+    <script src="/static/quiz/scripts/scripts.js">
+    </script>
+</head>
+<body onload="sizeCalc();">
+
+<div class="wrapper">
+    <div class="content_wrapper" id="container">
+        <div class="padding_5"></div>
+        <div class="header_wrapper">
+        <h1>{% block title %}{% endblock %}</h1>
+        </div>
+        <div class="view_wrapper">
+            {% block content %}
+            {% endblock %}
+        </div>
+        <div class="padding_5"></div>
+    </div>
+</div>
+
+
+</body>
+</html>

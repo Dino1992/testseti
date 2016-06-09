@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block title %}Тема: {{ theme.name }}{% endblock %}
+
+{% block content %}
+
+<div class="padding_10"></div>
+<div class="question">
+{{ question.text }}
+</div>
+<form method="get" id="quiz_form">
+    <input type="hidden" name="action" value="" id="action" />
+{% for answer in answers %}
+    <input {% if choice == answer.pk %}checked{% endif %}
+           type="radio" name="answer" value="{{ answer.pk }}" id="radio{{ answer.pk }}"/><label for="radio{{ answer.pk }}">{{ answer.text }}</label><br />
+{% endfor %}
+</form>
+<div class="control">
+    <ul>
+        <li>
+            {% if first_question %}
+                <a href="/quiz">Выбрать тему</a>
+            {% else %}
+                <a href="#" onclick="submit('prev')">Назад</a>
+            {% endif %}
+        </li>
+        <li>
+            &nbsp;
+        </li>
+        <li>
+            {% if last_question %}
+                <a href="#" onclick="submit('finish')">Завершить</a>
+            {% else %}
+                <a href="#" onclick="submit('next')">Вперёд</a>
+            {% endif %}
+        </li>
+    </ul>
+</div>
+
+
+{% endblock %}
