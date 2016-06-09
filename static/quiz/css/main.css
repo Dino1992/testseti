@@ -65,6 +65,10 @@ a:hover, a:visited, a {
     padding: 0;
 }
 
+.question_number {
+    float: right;
+}
+
 .result {
     font-size: 150%;
     padding-left: 10%;

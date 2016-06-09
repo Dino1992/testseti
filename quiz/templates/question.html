@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load staticfiles %}
 
-{% block title %}Тема: {{ theme.name }}{% endblock %}
+{% block title %}Тема: {{ theme.name }}<div class="question_number"> {{ question_idx }} из {{ total_question }} </div>{% endblock %}
 
 {% block content %}
 

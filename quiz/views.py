@@ -124,7 +124,9 @@ def question_view(request):
          'answers': question.get_answers(),
          'first_question': question_idx == 0,
          'last_question': (question_idx + 1) == len(questions),
-         'choice': answers[question_idx]})
+         'choice': answers[question_idx],
+         'question_idx': question_idx + 1,
+         'total_question': len(questions)})
 
 
 def test(request):
