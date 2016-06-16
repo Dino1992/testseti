@@ -72,6 +72,7 @@ a:hover, a:visited, a {
 .result {
     font-size: 150%;
     padding-left: 10%;
+    height: 53%;
 }
 
 .themes_list {

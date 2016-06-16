@@ -9,7 +9,7 @@
 <div class="question">
 {{ question.text }}
 </div>
-<form method="get" id="quiz_form">
+<form method="get" id="quiz_form" action="/quiz/question">
     <input type="hidden" name="action" value="" id="action" />
 {% for answer in answers %}
     <input {% if choice == answer.pk %}checked{% endif %}
